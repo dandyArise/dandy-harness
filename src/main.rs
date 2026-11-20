@@ -4,6 +4,8 @@ mod engine;
 #[cfg(windows)]
 mod process_helper;
 mod startup_probe;
+#[cfg(windows)]
+mod webview_memory;
 use engine::{Engine, EngineHandle, ORIGIN};
 use std::{
     env,
@@ -104,6 +106,33 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .inner_size(1280., 840.)
             .build()?;
             probe.mark("window");
+            #[cfg(windows)]
+            if env::var("DANDY_WEBVIEW_MEMORY").as_deref() != Ok("normal") {
+                let handle = app.handle().clone();
+                let memory_probe = probe.clone();
+                let last_minimized = std::sync::atomic::AtomicBool::new(false);
+                main.on_window_event(move |event| {
+                    if matches!(
+                        event,
+                        tauri::WindowEvent::Resized(_) | tauri::WindowEvent::Focused(_)
+                    ) {
+                        if let Some(window) = handle.get_webview_window("main") {
+                            if let Ok(minimized) = window.is_minimized() {
+                                if last_minimized
+                                    .swap(minimized, std::sync::atomic::Ordering::Relaxed)
+                                    != minimized
+                                {
+                                    webview_memory::update(
+                                        &window,
+                                        minimized,
+                                        memory_probe.clone(),
+                                    );
+                                }
+                            }
+                        }
+                    }
+                });
+            }
             // Even a spawn failure is displayed in the newly created window.
             match engine.unwrap_or_else(|| start_engine(&mut node)) {
                 Err(error) => show_engine_error(&main, &error),

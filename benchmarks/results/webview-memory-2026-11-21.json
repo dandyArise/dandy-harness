@@ -1,0 +1,3650 @@
+[
+  {
+    "label": "A1-minimized",
+    "sample": 0,
+    "at": "2026-11-20T23:11:39.0495994Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5201920,
+        "workingSet": 33505280
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170328064,
+        "workingSet": 175423488
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37294080,
+        "workingSet": 124518400
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3719168,
+        "workingSet": 22478848
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197664768,
+        "workingSet": 231698432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168296448
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 368558080.0,
+    "webWorkingSet": 621920256.0,
+    "totalPrivate": 616685568.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 1,
+    "at": "2026-11-20T23:11:40.1997405Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5201920,
+        "workingSet": 33505280
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170328064,
+        "workingSet": 175423488
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36843520,
+        "workingSet": 124067840
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3719168,
+        "workingSet": 22478848
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196747264,
+        "workingSet": 230846464
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168271872
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 367190016.0,
+    "webWorkingSet": 620593152.0,
+    "totalPrivate": 615317504.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 2,
+    "at": "2026-11-20T23:11:41.3403084Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5201920,
+        "workingSet": 33505280
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170328064,
+        "workingSet": 175423488
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36843520,
+        "workingSet": 124067840
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3719168,
+        "workingSet": 22478848
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196489216,
+        "workingSet": 230588416
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168271872
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 366931968.0,
+    "webWorkingSet": 620335104.0,
+    "totalPrivate": 615059456.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 3,
+    "at": "2026-11-20T23:11:42.4626822Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5201920,
+        "workingSet": 33505280
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170328064,
+        "workingSet": 175423488
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37081088,
+        "workingSet": 124317696
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3719168,
+        "workingSet": 22478848
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196489216,
+        "workingSet": 230588416
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168271872
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 367169536.0,
+    "webWorkingSet": 620584960.0,
+    "totalPrivate": 615297024.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 4,
+    "at": "2026-11-20T23:11:43.5881677Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5201920,
+        "workingSet": 33505280
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170328064,
+        "workingSet": 175423488
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36995072,
+        "workingSet": 124231680
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3719168,
+        "workingSet": 22478848
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196489216,
+        "workingSet": 230588416
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168271872
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 367083520.0,
+    "webWorkingSet": 620498944.0,
+    "totalPrivate": 615211008.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 5,
+    "at": "2026-11-20T23:11:44.6984424Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36900864,
+        "workingSet": 124186624
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3448832,
+        "workingSet": 16580608
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196489216,
+        "workingSet": 230588416
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 20238336,
+        "workingSet": 50892800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 24035328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101842944,
+        "workingSet": 168271872
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 366718976.0,
+    "webWorkingSet": 614555648.0,
+    "totalPrivate": 614649856.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 6,
+    "at": "2026-11-20T23:11:45.812954Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 34914304,
+        "workingSet": 124014592
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19120128,
+        "workingSet": 53080064
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101838848,
+        "workingSet": 168275968
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 341188608.0,
+    "webWorkingSet": 594452480.0,
+    "totalPrivate": 589119488.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 7,
+    "at": "2026-11-20T23:11:46.9426794Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 34914304,
+        "workingSet": 124014592
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19120128,
+        "workingSet": 53080064
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101838848,
+        "workingSet": 168280064
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70537216,
+        "workingSet": 83406848
+      }
+    ],
+    "webPrivate": 341188608.0,
+    "webWorkingSet": 594456576.0,
+    "totalPrivate": 589119488.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 8,
+    "at": "2026-11-20T23:11:48.0630154Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 34914304,
+        "workingSet": 124014592
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19120128,
+        "workingSet": 53080064
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101838848,
+        "workingSet": 168280064
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70426624,
+        "workingSet": 83345408
+      }
+    ],
+    "webPrivate": 341188608.0,
+    "webWorkingSet": 594456576.0,
+    "totalPrivate": 589008896.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 9,
+    "at": "2026-11-20T23:11:49.1832077Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 35094528,
+        "workingSet": 124465152
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18722816,
+        "workingSet": 52764672
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100880384,
+        "workingSet": 167944192
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70426624,
+        "workingSet": 83345408
+      }
+    ],
+    "webPrivate": 340013056.0,
+    "webWorkingSet": 594255872.0,
+    "totalPrivate": 587833344.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 10,
+    "at": "2026-11-20T23:11:50.3102704Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 35094528,
+        "workingSet": 124465152
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18722816,
+        "workingSet": 52764672
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100880384,
+        "workingSet": 167944192
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70426624,
+        "workingSet": 83345408
+      }
+    ],
+    "webPrivate": 340013056.0,
+    "webWorkingSet": 594255872.0,
+    "totalPrivate": 587833344.0
+  },
+  {
+    "label": "A1-minimized",
+    "sample": 11,
+    "at": "2026-11-20T23:11:51.444604Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33456128
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170225664,
+        "workingSet": 175370240
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1269760,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 35094528,
+        "workingSet": 124465152
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3383296,
+        "workingSet": 16515072
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 174272512,
+        "workingSet": 208560128
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18722816,
+        "workingSet": 52764672
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7659520,
+        "workingSet": 24006656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100880384,
+        "workingSet": 167944192
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4493312
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70426624,
+        "workingSet": 83345408
+      }
+    ],
+    "webPrivate": 340013056.0,
+    "webWorkingSet": 594255872.0,
+    "totalPrivate": 587833344.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 0,
+    "at": "2026-11-20T23:14:19.110039Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38707200,
+        "workingSet": 125038592
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197197824,
+        "workingSet": 230113280
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 366145536.0,
+    "webWorkingSet": 615280640.0,
+    "totalPrivate": 613384192.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 1,
+    "at": "2026-11-20T23:14:20.2605029Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124682240
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230096896
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614907904.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 2,
+    "at": "2026-11-20T23:14:21.3975531Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124682240
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230096896
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614907904.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 3,
+    "at": "2026-11-20T23:14:22.5194681Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230096896
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614916096.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 4,
+    "at": "2026-11-20T23:14:23.644254Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 5,
+    "at": "2026-11-20T23:14:24.7817885Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 6,
+    "at": "2026-11-20T23:14:25.9003992Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 7,
+    "at": "2026-11-20T23:14:27.0250122Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 8,
+    "at": "2026-11-20T23:14:28.1378006Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 9,
+    "at": "2026-11-20T23:14:29.2957062Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 10,
+    "at": "2026-11-20T23:14:30.4322227Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164487168
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614928384.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "A2-minimized",
+    "sample": 11,
+    "at": "2026-11-20T23:14:31.5542482Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5120000,
+        "workingSet": 33361920
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 169578496,
+        "workingSet": 174198784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1261568,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38305792,
+        "workingSet": 124690432
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3653632,
+        "workingSet": 22437888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197181440,
+        "workingSet": 230109184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18718720,
+        "workingSet": 49303552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7786496,
+        "workingSet": 23900160
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 100081664,
+        "workingSet": 164491264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 811008,
+        "workingSet": 4509696
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70467584,
+        "workingSet": 83324928
+      }
+    ],
+    "webPrivate": 365727744.0,
+    "webWorkingSet": 614932480.0,
+    "totalPrivate": 612966400.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 0,
+    "at": "2026-11-20T23:12:29.03856Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5033984,
+        "workingSet": 33345536
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176238592
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1282048,
+        "workingSet": 8122368
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37392384,
+        "workingSet": 123043840
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 2756608,
+        "workingSet": 13574144
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 197160960,
+        "workingSet": 230105088
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18767872,
+        "workingSet": 49287168
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 118558720,
+        "workingSet": 2985984
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 843776,
+        "workingSet": 4521984
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 383459328.0,
+    "webWorkingSet": 442900480.0,
+    "totalPrivate": 633700352.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 1,
+    "at": "2026-11-20T23:12:30.1764004Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176238592
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37572608,
+        "workingSet": 123543552
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3706880,
+        "workingSet": 22470656
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193884160,
+        "workingSet": 227426304
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18767872,
+        "workingSet": 49389568
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 118558720,
+        "workingSet": 3112960
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 843776,
+        "workingSet": 4521984
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 381313024.0,
+    "webWorkingSet": 449847296.0,
+    "totalPrivate": 631488512.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 2,
+    "at": "2026-11-20T23:12:31.3073369Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176246784
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37265408,
+        "workingSet": 123236352
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49274880
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 118558720,
+        "workingSet": 3112960
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 843776,
+        "workingSet": 4521984
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 380641280.0,
+    "webWorkingSet": 449175552.0,
+    "totalPrivate": 630816768.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 3,
+    "at": "2026-11-20T23:12:32.4369591Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37265408,
+        "workingSet": 123244544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53854208
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 843776,
+        "workingSet": 4521984
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361619456.0,
+    "webWorkingSet": 500006912.0,
+    "totalPrivate": 611794944.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 4,
+    "at": "2026-11-20T23:12:33.5843723Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37265408,
+        "workingSet": 123244544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361619456.0,
+    "webWorkingSet": 500051968.0,
+    "totalPrivate": 611741696.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 5,
+    "at": "2026-11-20T23:12:34.7312458Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 37040128,
+        "workingSet": 123125760
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361394176.0,
+    "webWorkingSet": 499933184.0,
+    "totalPrivate": 611516416.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 6,
+    "at": "2026-11-20T23:12:35.8605732Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123076608
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499884032.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 7,
+    "at": "2026-11-20T23:12:36.9817489Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123080704
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499888128.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 8,
+    "at": "2026-11-20T23:12:38.1097297Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123080704
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499888128.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 9,
+    "at": "2026-11-20T23:12:39.2615042Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123080704
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227180544
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53899264
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499888128.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 10,
+    "at": "2026-11-20T23:12:40.3866241Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123080704
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227192832
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53903360
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499904512.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B1-minimized",
+    "sample": 11,
+    "at": "2026-11-20T23:12:41.5099544Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5005312,
+        "workingSet": 33320960
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 172646400,
+        "workingSet": 176250880
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1245184,
+        "workingSet": 8101888
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 36990976,
+        "workingSet": 123080704
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3702784,
+        "workingSet": 22466560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193638400,
+        "workingSet": 227192832
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 18653184,
+        "workingSet": 49356800
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 8822784,
+        "workingSet": 23904256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 99536896,
+        "workingSet": 53903360
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70434816,
+        "workingSet": 83484672
+      }
+    ],
+    "webPrivate": 361345024.0,
+    "webWorkingSet": 499904512.0,
+    "totalPrivate": 611467264.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 0,
+    "at": "2026-11-20T23:15:35.8215132Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38203392,
+        "workingSet": 126787584
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 196628480,
+        "workingSet": 229597184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50114560
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2195456
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 367779840.0,
+    "webWorkingSet": 455053312.0,
+    "totalPrivate": 616177664.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 1,
+    "at": "2026-11-20T23:15:36.9861309Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126816256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 193249280,
+        "workingSet": 226787328
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2420736
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 364228608.0,
+    "webWorkingSet": 452603904.0,
+    "totalPrivate": 612626432.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 2,
+    "at": "2026-11-20T23:15:38.1280329Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126816256
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2420736
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452341760.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 3,
+    "at": "2026-11-20T23:15:39.2550897Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2437120
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452366336.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 4,
+    "at": "2026-11-20T23:15:40.3645652Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2437120
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452366336.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 5,
+    "at": "2026-11-20T23:15:41.4926563Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2437120
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452366336.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 6,
+    "at": "2026-11-20T23:15:42.6207494Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2437120
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452366336.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 7,
+    "at": "2026-11-20T23:15:43.742204Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2437120
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452366336.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 8,
+    "at": "2026-11-20T23:15:44.8604699Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2441216
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452370432.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 9,
+    "at": "2026-11-20T23:15:45.9945033Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226525184
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2441216
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452370432.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 10,
+    "at": "2026-11-20T23:15:47.138939Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226533376
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2441216
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452378624.0,
+    "totalPrivate": 612364288.0
+  },
+  {
+    "label": "B3-minimized",
+    "sample": 11,
+    "at": "2026-11-20T23:15:48.2851312Z",
+    "processes": [
+      {
+        "name": "dandy-harness.exe",
+        "kind": "main",
+        "privateBytes": 5107712,
+        "workingSet": 33480704
+      },
+      {
+        "name": "node.exe",
+        "kind": "main",
+        "privateBytes": 170901504,
+        "workingSet": 176472064
+      },
+      {
+        "name": "conhost.exe",
+        "kind": "main",
+        "privateBytes": 1241088,
+        "workingSet": 8105984
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "main",
+        "privateBytes": 38031360,
+        "workingSet": 126824448
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "crashpad-handler",
+        "privateBytes": 3641344,
+        "workingSet": 22433792
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "gpu-process",
+        "privateBytes": 192987136,
+        "workingSet": 226533376
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 19599360,
+        "workingSet": 50221056
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "utility",
+        "privateBytes": 7798784,
+        "workingSet": 23924736
+      },
+      {
+        "name": "msedgewebview2.exe",
+        "kind": "renderer",
+        "privateBytes": 101908480,
+        "workingSet": 2441216
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 790528,
+        "workingSet": 4497408
+      },
+      {
+        "name": "python.exe",
+        "kind": "main",
+        "privateBytes": 70356992,
+        "workingSet": 83415040
+      }
+    ],
+    "webPrivate": 363966464.0,
+    "webWorkingSet": 452378624.0,
+    "totalPrivate": 612364288.0
+  }
+]
