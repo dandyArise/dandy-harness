@@ -42,4 +42,15 @@ générations). En cas d’échec, la fenêtre reste ouverte et son titre indiqu
 cause. Un arrêt après démarrage est également signalé, sans recharger la conversation.
 Le superviseur ne redémarre pas automatiquement les tâches.
 
+Node démarre en parallèle de la création de WebView2 ; une erreur de lancement
+reste affichée dans la fenêtre. Le handle supervisé est conservé dès le lancement,
+y compris si la création de la fenêtre échoue.
+
+Le profilage est désactivé par défaut. `DANDY_STARTUP_PROBE` désigne un fichier
+local de jalons (millisecondes depuis l’entrée Rust, sans contenu de conversation).
+Dans ce mode uniquement, `DANDY_STARTUP_SERIAL=1` rétablit le démarrage séquentiel
+pour comparaison. `DANDY_NODE_PROFILE` permet un profil CPU Node de 4,5 secondes
+dans le fichier indiqué ; ce diagnostic contient des chemins de modules locaux.
+Voir [le comparatif démarrage et mémoire](STARTUP-PERFORMANCE-2026-11-20.md).
+
 [Inventaire, frontières et validations du portage Rust](RUST-MIGRATION.md).

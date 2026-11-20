@@ -3,6 +3,7 @@
 mod engine;
 #[cfg(windows)]
 mod process_helper;
+mod startup_probe;
 use engine::{Engine, EngineHandle, ORIGIN};
 use std::{
     env,
@@ -14,12 +15,20 @@ use std::{
 use tauri::{Manager, WebviewUrl, WebviewWindowBuilder};
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let probe = startup_probe::Probe::new();
+    probe.mark("entry");
     let root = env::var_os("DANDY_HARNESS_SOURCE")
         .map(PathBuf::from)
         .unwrap_or_else(|| PathBuf::from(r"D:\Github\Projets\IA\deepseek-harness"));
     let home = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("data");
     std::fs::create_dir_all(&home)?;
     let mut node = Command::new("node");
+    if env::var_os("DANDY_NODE_PROFILE").is_some() {
+        let script = home.join("startup-profile.mjs");
+        std::fs::write(&script, include_str!("startup-profile.mjs"))?;
+        node.arg("--import")
+            .arg(tauri::Url::from_file_path(script).unwrap().as_str());
+    }
     if root.join("apps/cli/lib/bin.js").is_file() {
         node.arg("apps/cli/lib/bin.js");
     } else {
@@ -42,6 +51,25 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let setup_engine = running.clone();
     tauri::Builder::default()
         .setup(move |app| {
+            probe.mark("setup");
+            // Node boot and WebView creation are independent. Keep the owned
+            // handle immediately so a window-construction error also cleans up.
+            // Serial mode exists only with the diagnostic probe, for paired benchmarks.
+            let serial = probe.enabled() && env::var("DANDY_STARTUP_SERIAL").as_deref() == Ok("1");
+            let start_engine = |node: &mut Command| {
+                let engine = Engine::spawn(node);
+                if let Ok(engine) = &engine {
+                    probe.mark("spawn");
+                    *setup_engine.lock().unwrap() = Some(engine.handle.clone());
+                }
+                engine
+            };
+            let engine = if serial {
+                None
+            } else {
+                Some(start_engine(&mut node))
+            };
+            let title_probe = probe.clone();
             let main = WebviewWindowBuilder::new(
                 app,
                 "main",
@@ -60,18 +88,30 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 "#,
             )
             .initialization_script(include_str!("model-menu.js"))
+            .initialization_script(if probe.enabled() {
+                startup_probe::SCRIPT
+            } else {
+                ""
+            })
             .on_navigation(|url| url.as_str() == "about:blank" || url.as_str().starts_with(ORIGIN))
+            .on_document_title_changed(move |window, title| {
+                if title_probe.enabled() && title == "DANDY-BENCH-CHAT-READY" {
+                    title_probe.mark("chat_ready");
+                    let _ = window.set_title(&title);
+                }
+            })
             .title("Dandy Harness")
             .inner_size(1280., 840.)
             .build()?;
-            // Display the window before spawning: missing Node must be visible too.
-            match Engine::spawn(&mut node) {
+            probe.mark("window");
+            // Even a spawn failure is displayed in the newly created window.
+            match engine.unwrap_or_else(|| start_engine(&mut node)) {
                 Err(error) => show_engine_error(&main, &error),
                 Ok(engine) => {
-                    *setup_engine.lock().unwrap() = Some(engine.handle.clone());
                     std::thread::spawn(move || {
                         match engine.wait_ready(Duration::from_secs(60)) {
                             Ok(address) => {
+                                probe.mark("engine_ready");
                                 let navigation = address
                                     .parse()
                                     .map_err(|_| "Adresse locale invalide.".to_string())

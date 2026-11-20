@@ -43,8 +43,8 @@ inchangées sans un runtime JS ou un processus de compatibilité.
 
 `src/engine.rs` possède le processus Node, lit sa sortie avec une ligne limitée à
 16 Kio, accepte seulement l’annonce de disponibilité de l’origine locale attendue,
-attend au maximum 60 secondes au démarrage et détecte un arrêt. La fenêtre est
-créée avant de tenter le lancement de Node : un exécutable absent produit une
+attend au maximum 60 secondes au démarrage et détecte un arrêt. La création de
+la fenêtre chevauche désormais le démarrage Node ; un exécutable absent produit une
 erreur visible au lieu d’une sortie silencieuse. Le titre signale aussi l’arrêt
 d’un moteur prêt, sans remplacer la conversation.
 
