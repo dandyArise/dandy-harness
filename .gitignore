@@ -1,0 +1,9 @@
+/target/
+/data/
+/.repolens/
+/gen/
+*.log
+*.cpuprofile
+/tmp-delete-check/
+/history-*.json
+/process-comparison*.json

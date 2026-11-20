@@ -1,0 +1,14 @@
+{
+  "productName": "Dandy Harness",
+  "version": "0.1.0",
+  "identifier": "local.dandy.harness",
+  "build": {
+    "frontendDist": "assets"
+  },
+  "app": {
+    "windows": []
+  },
+  "bundle": {
+    "active": false
+  }
+}
