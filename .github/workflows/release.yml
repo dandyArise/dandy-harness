@@ -70,11 +70,7 @@ jobs:
         working-directory: engine-source
         run: pnpm run build:artifacts
       - name: Pack engine and vendor
-        working-directory: engine-source
-        run: |
-          node --import tsx scripts/release/pack.ts --family vendor --out ../target/packed-vendor --concurrency 1
-          node --import tsx apps/desktop/scripts/pack-local-packages.ts --out ../target/packed-dsh --concurrency 1
-          pnpm --dir native/system/packages/entry pack --pack-destination ../../../../../target/packed-vendor
+        run: node pack-engine.mjs engine-source
       - name: Prepare production runtime
         run: node prepare-engine.mjs engine-source target/engine-runtime
       - name: Install production dependencies

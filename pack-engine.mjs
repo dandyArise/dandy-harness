@@ -1,0 +1,13 @@
+import { readFileSync } from 'node:fs';
+import { resolve, join } from 'node:path';
+import { execFileSync } from 'node:child_process';
+const source = resolve(process.argv[2]);
+const pnpmRoot = join(source, 'node_modules/pnpm');
+const manifest = JSON.parse(readFileSync(join(pnpmRoot, 'package.json'), 'utf8'));
+const pnpm = join(pnpmRoot, manifest.bin.pnpm);
+const env = { ...process.env, npm_execpath: pnpm };
+const run = args => execFileSync(process.execPath, args, { cwd: source, env, stdio: 'inherit' });
+const vendor = resolve('target/packed-vendor');
+run(['--import', 'tsx', 'scripts/release/pack.ts', '--family', 'vendor', '--out', vendor, '--concurrency', '1']);
+run(['--import', 'tsx', 'apps/desktop/scripts/pack-local-packages.ts', '--out', resolve('target/packed-dsh'), '--concurrency', '1']);
+run([pnpm, '--dir', 'native/system/packages/entry', 'pack', '--pack-destination', vendor]);

@@ -3,18 +3,15 @@ $ErrorActionPreference = 'Stop'
 $Source = (Resolve-Path -LiteralPath $Source).Path
 $env:DSH_BUILD_CLIENT_PROFILE = 'local'
 $env:npm_config_verify_deps_before_run = 'false'
-$env:npm_execpath = Join-Path (Split-Path (Split-Path (Get-Command node).Source)) 'node_modules/pnpm/bin/pnpm.mjs'
-if (-not (Test-Path -LiteralPath $env:npm_execpath)) { throw 'pnpm.mjs introuvable à côté de Node.' }
 function Check-Exit { if ($LASTEXITCODE -ne 0) { throw "Préparation du moteur : code $LASTEXITCODE" } }
 Push-Location $Source
 try {
     & pnpm --config.verify-deps-before-run=false run build:artifacts
     Check-Exit
-    & node --import tsx scripts/release/pack.ts --family vendor --out (Join-Path $PSScriptRoot 'target/packed-vendor') --concurrency 1
-    Check-Exit
-    & node --import tsx apps/desktop/scripts/pack-local-packages.ts --out (Join-Path $PSScriptRoot 'target/packed-dsh') --concurrency 1
-    Check-Exit
-    & pnpm --config.verify-deps-before-run=false --dir native/system/packages/entry pack --pack-destination (Join-Path $PSScriptRoot 'target/packed-vendor')
+} finally { Pop-Location }
+Push-Location $PSScriptRoot
+try {
+    & node (Join-Path $PSScriptRoot 'pack-engine.mjs') $Source
     Check-Exit
 } finally { Pop-Location }
 $output = Join-Path $PSScriptRoot ('target/engine-' + [Guid]::NewGuid().ToString('N'))
