@@ -85,7 +85,11 @@ jobs:
       - name: Lint launcher
         run: cargo clippy --locked --target ${{ matrix.target }} --all-targets -- -D warnings
       - name: Build installers
-        run: pnpm dlx @tauri-apps/cli@2.12.6 build --target ${{ matrix.target }} --bundles ${{ matrix.bundles }} --config target/release-resources.json
+        env:
+          # linuxdeploy's bundled strip does not support all modern ELF sections.
+          # https://github.com/tauri-apps/tauri/issues/14796
+          NO_STRIP: 'true'
+        run: pnpm dlx @tauri-apps/cli@2.12.6 build --verbose --target ${{ matrix.target }} --bundles ${{ matrix.bundles }} --config target/release-resources.json
       - name: Verify installed runtime
         run: node verify-installed.mjs ${{ matrix.target }}
       - uses: actions/upload-artifact@v4
