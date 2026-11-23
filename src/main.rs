@@ -1,6 +1,7 @@
 #![cfg_attr(target_os = "windows", windows_subsystem = "windows")]
 
 mod engine;
+mod node_runtime;
 #[cfg(windows)]
 mod process_helper;
 mod startup_probe;
@@ -24,7 +25,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         .unwrap_or_else(|| PathBuf::from(r"D:\Github\Projets\IA\deepseek-harness"));
     let home = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("data");
     std::fs::create_dir_all(&home)?;
-    let mut node = Command::new("node");
+    let mut node = Command::new(node_runtime::executable());
+    // Opt-in until interactive and sustained-tool workloads are validated.
+    // Scope the V8 setting to the engine, not to child MCP/tool processes.
+    if env::var("DANDY_NODE_MEMORY").as_deref() == Ok("compact") {
+        node.arg("--max-semi-space-size=4");
+    }
     if env::var_os("DANDY_NODE_PROFILE").is_some() {
         let script = home.join("startup-profile.mjs");
         std::fs::write(&script, include_str!("startup-profile.mjs"))?;

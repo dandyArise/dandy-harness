@@ -10,9 +10,27 @@ Depuis PowerShell dans ce dossier, avec Node dans le PATH :
 .\target\x86_64-pc-windows-msvc\debug\dandy-harness.exe
 ```
 
+Le lanceur cherche Node dans cet ordre : `DANDY_NODE_EXECUTABLE` si défini,
+`runtime/node.exe` à côté du lanceur, puis le `PATH`. Cela permet de fournir
+un runtime avec la distribution sans dépendre du terminal qui ouvre l'application.
+
 Le moteur utilise par défaut le fork construit dans `D:\Github\Projets\IA\deepseek-harness`. Définir `DANDY_HARNESS_SOURCE` pour employer un autre checkout qui dispose de ses dépendances et artefacts web. Le profil LM Studio importé lit `LM_API_TOKEN` dans l’environnement du processus. Une fois ouvert, utiliser la barre latérale pour sélectionner une conversation.
 
 ## Construire
+
+### Installateur Windows local
+
+Avec pnpm, Rust MSVC et les outils C++ Visual Studio disponibles :
+
+```powershell
+.\build-installer.ps1
+```
+
+Le script vérifie le SHA-256 officiel de Node 24, embarque son exécutable et sa
+licence, puis produit `target/installer/x86_64-pc-windows-msvc/release/bundle/nsis/Dandy Harness_0.1.0_x64-setup.exe`.
+L'installation est par utilisateur, dans `%LOCALAPPDATA%/Dandy Harness`.
+Le runtime Node est inclus ; le moteur reste fourni par le checkout décrit
+ci-dessus. Ce paquet n'est donc pas encore une distribution autonome du moteur.
 
 Le lanceur Rust utilise `apps/cli/lib/bin.js` quand la CLI est compilée. Après une modification des sources de la CLI, reconstruire cet artefact pour que le prochain lancement utilise la modification. Si le fichier compilé est absent, le lanceur charge `apps/cli/src/bin.ts` via `tsx`.
 
@@ -52,5 +70,10 @@ Dans ce mode uniquement, `DANDY_STARTUP_SERIAL=1` rétablit le démarrage séque
 pour comparaison. `DANDY_NODE_PROFILE` permet un profil CPU Node de 4,5 secondes
 dans le fichier indiqué ; ce diagnostic contient des chemins de modules locaux.
 Voir [le comparatif démarrage et mémoire](STARTUP-PERFORMANCE-2026-11-20.md).
+
+`DANDY_NODE_MEMORY=compact` active une variante expérimentale : zone temporaire
+V8 de 4 Mio pour le moteur Node seulement. Ce n’est pas une limite du tas total.
+La variable absente conserve le comportement normal. Voir les mesures et limites
+dans [le rapport du 23 novembre](MEMORY-STARTUP-2026-11-23.md).
 
 [Inventaire, frontières et validations du portage Rust](RUST-MIGRATION.md).

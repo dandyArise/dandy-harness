@@ -1,0 +1,68 @@
+[
+  {
+    "file": "perf-20261123-final-0.json",
+    "label": "normal",
+    "chatMs": 2754.904,
+    "engineMs": 2178.112,
+    "tauriMiB": 4.02,
+    "nodeMiB": 311.53,
+    "webviewMiB": 558.19,
+    "otherMiB": 69.32,
+    "totalMiB": 943.06
+  },
+  {
+    "file": "perf-20261123-final-1.json",
+    "label": "compact",
+    "chatMs": 2643.462,
+    "engineMs": 2179.242,
+    "tauriMiB": 4.07,
+    "nodeMiB": 194.53,
+    "webviewMiB": 599.97,
+    "otherMiB": 69.11,
+    "totalMiB": 867.68
+  },
+  {
+    "file": "perf-20261123-final-2.json",
+    "label": "compact",
+    "chatMs": 2761.608,
+    "engineMs": 2243.265,
+    "tauriMiB": 4.1,
+    "nodeMiB": 188.77,
+    "webviewMiB": 605.26,
+    "otherMiB": 69.07,
+    "totalMiB": 867.21
+  },
+  {
+    "file": "perf-20261123-final-3.json",
+    "label": "normal",
+    "chatMs": 2545.039,
+    "engineMs": 2019.01,
+    "tauriMiB": 3.99,
+    "nodeMiB": 312.11,
+    "webviewMiB": 627.22,
+    "otherMiB": 69.21,
+    "totalMiB": 1012.54
+  },
+  {
+    "file": "perf-20261123-final-4.json",
+    "label": "normal",
+    "chatMs": 2451.992,
+    "engineMs": 1951.481,
+    "tauriMiB": 4.03,
+    "nodeMiB": 314.2,
+    "webviewMiB": 593.75,
+    "otherMiB": 69.29,
+    "totalMiB": 981.27
+  },
+  {
+    "file": "perf-20261123-final-5.json",
+    "label": "compact",
+    "chatMs": 2527.934,
+    "engineMs": 2019.312,
+    "tauriMiB": 4.04,
+    "nodeMiB": 192.26,
+    "webviewMiB": 594.39,
+    "otherMiB": 68.95,
+    "totalMiB": 859.63
+  }
+]
