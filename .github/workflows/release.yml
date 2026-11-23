@@ -6,29 +6,45 @@ on:
         description: Release tag matching tauri.conf.json
         required: true
         default: v0.1.0
+      platform:
+        description: Build all installers or retry one platform
+        type: choice
+        default: all
+        options: [all, windows, linux, macos-arm64, macos-x64]
 permissions:
   contents: read
 concurrency:
-  group: installers-${{ github.ref }}
+  group: installers-${{ github.ref }}-${{ inputs.platform || 'all' }}
   cancel-in-progress: false
 jobs:
+  matrix:
+    runs-on: ubuntu-22.04
+    outputs:
+      targets: ${{ steps.targets.outputs.targets }}
+    steps:
+      - id: targets
+        env:
+          PLATFORM: ${{ inputs.platform }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          targets = [
+            dict(key='windows', os='windows-latest', target='x86_64-pc-windows-msvc', bundles='nsis'),
+            dict(key='macos-arm64', os='macos-15', target='aarch64-apple-darwin', bundles='dmg'),
+            dict(key='macos-x64', os='macos-15-intel', target='x86_64-apple-darwin', bundles='dmg'),
+            dict(key='linux', os='ubuntu-22.04', target='x86_64-unknown-linux-gnu', bundles='deb,appimage'),
+          ]
+          selected = [t for t in targets if os.environ['PLATFORM'] == 'all' or t['key'] == os.environ['PLATFORM']]
+          assert selected
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+            output.write('targets=' + json.dumps(selected) + '\n')
+          PY
   build:
+    needs: matrix
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - os: windows-latest
-            target: x86_64-pc-windows-msvc
-            bundles: nsis
-          - os: macos-15
-            target: aarch64-apple-darwin
-            bundles: dmg
-          - os: macos-15-intel
-            target: x86_64-apple-darwin
-            bundles: dmg
-          - os: ubuntu-22.04
-            target: x86_64-unknown-linux-gnu
-            bundles: deb,appimage
+        include: ${{ fromJSON(needs.matrix.outputs.targets) }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 90
     env:
@@ -78,6 +94,12 @@ jobs:
         run: pnpm install --prod
       - name: Test isolated engine
         run: node smoke-engine.mjs target/engine-runtime
+      - name: Filter Linux prebuilds
+        if: runner.os == 'Linux'
+        run: |
+          node --test prune-linux-runtime.test.mjs
+          node prune-linux-runtime.mjs target/engine-runtime
+          node smoke-engine.mjs target/engine-runtime
       - name: Stage Node and resources
         run: node stage-release.mjs target/engine-runtime
       - name: Test launcher
@@ -103,6 +125,7 @@ jobs:
             target/${{ matrix.target }}/release/bundle/deb/*.deb
             target/${{ matrix.target }}/release/bundle/appimage/*.AppImage
   publish:
+    if: inputs.platform == 'all'
     needs: build
     runs-on: ubuntu-22.04
     permissions:
@@ -122,5 +145,11 @@ jobs:
           mkdir release-assets
           find artifacts -type f \( -name '*.exe' -o -name '*.dmg' -o -name '*.deb' -o -name '*.AppImage' \) -exec cp {} release-assets/ \;
           test "$(find release-assets -type f | wc -l)" -eq 5
+          # Keep checksum filenames identical to GitHub asset download names.
+          for file in release-assets/*; do
+            name="$(basename "$file")"
+            normalized="${name// /-}"
+            if [ "$name" != "$normalized" ]; then mv "$file" "release-assets/$normalized"; fi
+          done
           (cd release-assets && sha256sum * > SHA256SUMS.txt)
           gh release create "$RELEASE_TAG" release-assets/* --target "$GITHUB_SHA" --title "Dandy Harness $RELEASE_TAG" --notes-file RELEASE.md --prerelease
