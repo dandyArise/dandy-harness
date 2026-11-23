@@ -6,10 +6,11 @@ Installateur NSIS x64 par utilisateur, avec Node 24.22.3 et sa licence embarqué
 L'installation silencieuse a retourné 0. L'exécutable installé dans
 `%LOCALAPPDATA%/Dandy Harness` a ouvert le chat existant et lancé son propre
 `runtime/node.exe`. Glimmer et Auto review sont restés sélectionnés.
-Le moteur dépend encore du checkout construit : le paquet n'est pas autonome.
+Cette première installation dépendait encore du checkout construit. La section
+« Complément » ci-dessous décrit les corrections et les nouvelles vérifications.
 
 Installateur : `target/installer/x86_64-pc-windows-msvc/release/bundle/nsis/Dandy Harness_0.1.0_x64-setup.exe`.
-SHA-256 : `42E02F312FE11FE7A8673229CE12C44B88CB90F16505EC7D912393F07949F178`.
+SHA-256 du nouvel installateur autonome : `1E379F0E38388E1EAA62BFD4BFB0DF0061EEE33F9311428C266E46BA769E9CC8`.
 
 ## Vérifications exécutées
 
@@ -29,7 +30,8 @@ SHA-256 : `42E02F312FE11FE7A8673229CE12C44B88CB90F16505EC7D912393F07949F178`.
 - Documentation : `pnpm run doc-sync` : 43 portes réussies.
 
 Ces groupes se recouvrent ; leurs nombres ne constituent pas un total unique.
-Les cinq échecs de liens symboliques restent visibles, sans désactivation de tests.
+Les cinq échecs de liens symboliques étaient présents lors de ce premier passage ;
+ils sont résolus dans le complément ci-dessous, sans désactivation de tests.
 
 ## Limites du parcours réel
 
@@ -45,3 +47,64 @@ pas cette preuve Tauri. Aucune amélioration de performance nouvelle n'est reven
 Construire le moteur avec `pnpm run build`, puis exécuter `./build-installer.ps1`
 dans ce dépôt avec pnpm et Rust MSVC disponibles. Le build utilise un répertoire
 isolé pour ne pas écraser un exécutable déjà ouvert.
+
+## Complément — liens Windows, migration Glimmer et moteur embarqué
+
+- Après activation du Mode développeur par l'utilisateur : 308 tests de
+  `profile-resolution.spec.ts` et `generation.spec.ts` réussis, y compris les
+  liens symboliques vers des fichiers. Les trois liens de dossiers du workspace
+  utilisent des jonctions sous Windows : 90 tests workspace réussis.
+- Identifiant réellement disponible : `meta/muse-glimmer`. Le catalogue et le
+  modèle par défaut utilisent cet identifiant ; Glimmer et Auto review sont
+  conservés. Aucune clé, aucun chargement LM Studio et aucun fine-tuning modifiés.
+- Régression reproduite : pendant un changement de modèle, le résumé essayait
+  l'ancien identifiant supprimé avant l'enregistrement du nouvel en-tête.
+  Le repli utilise maintenant la destination proposée, uniquement sur le même
+  fournisseur et uniquement pour `UNKNOWN_MODEL`. Nettoyage du repli dans
+  `finally` ; 183 tests de compactage réussis.
+- Tauri, conversation existante « Test de lecture seule : » : réponse « Bonjour »
+  en 13 s. Puis découverte de `read`, lecture réelle du README et réponse
+  « Suivi dépenses - FastAPI + React » en 46 s, avec Auto review conservé.
+- API réelle, test séparé : appel structuré d'un outil de test et restitution
+  d'une valeur aléatoire réussis. Ce test API ne remplace pas le parcours Tauri.
+- Lanceur Rust : 11 tests réussis, 1 benchmark ignoré ; Clippy sans avertissement.
+- Build moteur local : 8 portes réussies. Runtime de production isolé : HTTP 200,
+  page HTML servie, puis arrêt de son propre processus de test.
+
+Le packaging prépare les archives locales et leurs dépendances de production,
+préserve les patches du dépôt et intègre le moteur sous `engine/`. Le lanceur
+cherche ce moteur à côté de son exécutable, sauf override explicite
+`DANDY_HARNESS_SOURCE`. Les données existantes restent à leur emplacement ; sur
+un nouveau poste elles vont dans `%LOCALAPPDATA%/Dandy Harness/data`.
+
+Reproduction : `./build-installer.ps1` prépare et vérifie automatiquement le
+moteur. Pour réutiliser un staging déjà vérifié :
+`./build-installer.ps1 -EngineDirectory <staging> -Compression zlib`.
+La compression est une option NSIS documentée par
+[Tauri](https://v2.tauri.app/reference/config/#nsisconfig) ; LZMA reste la valeur
+par défaut. La première tentative de packaging a rencontré un verrou Windows
+après ouverture prématurée de l'exécutable ; ne pas lancer la sortie de build
+avant la fin du bundling.
+
+### Résultat final de l'installation autonome
+
+- Build NSIS terminé avec code 0, installateur de 309 703 334 octets (295,36 MiB).
+- Installation silencieuse `/S` terminée avec code 0.
+- Lancement de `%LOCALAPPDATA%/Dandy Harness/dandy-harness.exe` depuis le dossier
+  temporaire, sans `DANDY_HARNESS_SOURCE` ni `DANDY_NODE_EXECUTABLE`.
+- Son processus moteur utilise le Node embarqué et l'entrée
+  `node_modules/@deepseek-ai/dsh/lib/bin.js`. Zéro lien de réanalyse dans le
+  répertoire moteur installé : aucune dépendance par jonction vers le checkout.
+- Fenêtre Tauri installée observée : conversation et dernières réponses
+  restaurées, éditeur disponible, Glimmer et Auto review conservés.
+- Lint moteur réussi. Doc-sync : 42 portes réussies initialement, puis la porte
+  de traduction corrigée et relancée sur les 1 303 paires, toutes cohérentes.
+
+Les appels réels Glimmer ci-dessus ont été faits avec exactement le staging
+embarqué dans ce nouvel installateur ; après installation, le lancement et la
+restauration de l'interface ont été revérifiés. Aucun essai sur machine vierge
+ou VM n'a été réalisé. Les changements de cette passe restent locaux.
+
+RepoLens `gain . --format json` (cumuls historiques, estimations des plages de
+lecture, pas une mesure propre à cette passe) : moteur 8 360 505 jetons estimés
+économisés (89,9 %), lanceur 6 027 (28,4 %). Pas de repli sur `rg`.

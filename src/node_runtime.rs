@@ -1,10 +1,10 @@
 use std::{env, ffi::OsString, path::Path};
 
-fn resolve(override_path: Option<OsString>, launcher: Option<&Path>) -> OsString {
+fn resolve(override_path: Option<OsString>, resources: Option<&Path>) -> OsString {
     if let Some(path) = override_path.filter(|value| !value.is_empty()) {
         return path;
     }
-    if let Some(directory) = launcher.and_then(Path::parent) {
+    if let Some(directory) = resources {
         let bundled =
             directory
                 .join("runtime")
@@ -16,11 +16,8 @@ fn resolve(override_path: Option<OsString>, launcher: Option<&Path>) -> OsString
     OsString::from("node")
 }
 
-pub fn executable() -> OsString {
-    resolve(
-        env::var_os("DANDY_NODE_EXECUTABLE"),
-        env::current_exe().ok().as_deref(),
-    )
+pub fn executable(resources: &Path) -> OsString {
+    resolve(env::var_os("DANDY_NODE_EXECUTABLE"), Some(resources))
 }
 
 #[cfg(test)]
@@ -38,7 +35,10 @@ mod tests {
     #[test]
     fn missing_bundle_uses_path() {
         assert_eq!(
-            resolve(None, Some(Path::new("missing-launcher"))),
+            resolve(
+                None,
+                Some(&env::temp_dir().join("dandy-missing-runtime-test/missing-launcher"))
+            ),
             OsString::from("node")
         );
     }

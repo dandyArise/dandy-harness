@@ -4,28 +4,24 @@ mod engine;
 mod node_runtime;
 #[cfg(windows)]
 mod process_helper;
+mod runtime_paths;
 mod startup_probe;
 #[cfg(windows)]
 mod webview_memory;
 use engine::{Engine, EngineHandle, ORIGIN};
 use std::{
     env,
-    path::PathBuf,
     process::Command,
     sync::{Arc, Mutex},
     time::Duration,
 };
 use tauri::{Manager, WebviewUrl, WebviewWindowBuilder};
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let probe = startup_probe::Probe::new();
-    probe.mark("entry");
-    let root = env::var_os("DANDY_HARNESS_SOURCE")
-        .map(PathBuf::from)
-        .unwrap_or_else(|| PathBuf::from(r"D:\Github\Projets\IA\deepseek-harness"));
-    let home = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("data");
+fn engine_command(resources: &std::path::Path) -> Result<Command, Box<dyn std::error::Error>> {
+    let root = runtime_paths::engine(resources)?;
+    let home = runtime_paths::home()?;
     std::fs::create_dir_all(&home)?;
-    let mut node = Command::new(node_runtime::executable());
+    let mut node = Command::new(node_runtime::executable(resources));
     // Opt-in until interactive and sustained-tool workloads are validated.
     // Scope the V8 setting to the engine, not to child MCP/tool processes.
     if env::var("DANDY_NODE_MEMORY").as_deref() == Ok("compact") {
@@ -37,7 +33,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         node.arg("--import")
             .arg(tauri::Url::from_file_path(script).unwrap().as_str());
     }
-    if root.join("apps/cli/lib/bin.js").is_file() {
+    if root
+        .join("node_modules/@deepseek-ai/dsh/lib/bin.js")
+        .is_file()
+    {
+        node.arg("node_modules/@deepseek-ai/dsh/lib/bin.js");
+    } else if root.join("lib/bin.js").is_file() {
+        node.arg("lib/bin.js");
+    } else if root.join("apps/cli/lib/bin.js").is_file() {
         node.arg("apps/cli/lib/bin.js");
     } else {
         node.args(["--import", "tsx/esm", "apps/cli/src/bin.ts"]);
@@ -55,11 +58,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "--port",
         "18643",
     ]);
+    Ok(node)
+}
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let probe = startup_probe::Probe::new();
+    probe.mark("entry");
     let running: Arc<Mutex<Option<EngineHandle>>> = Arc::new(Mutex::new(None));
     let setup_engine = running.clone();
     tauri::Builder::default()
         .setup(move |app| {
             probe.mark("setup");
+            let mut node = engine_command(&app.path().resource_dir()?)?;
             // Node boot and WebView creation are independent. Keep the owned
             // handle immediately so a window-construction error also cleans up.
             // Serial mode exists only with the diagnostic probe, for paired benchmarks.

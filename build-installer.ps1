@@ -1,5 +1,18 @@
-param([string]$NodeVersion = '24.22.3')
+param([string]$NodeVersion = '24.22.3', [string]$EngineDirectory,
+    [ValidateSet('lzma', 'zlib', 'bzip2', 'none')][string]$Compression = 'lzma')
 $ErrorActionPreference = 'Stop'
+if (-not $EngineDirectory) {
+    & (Join-Path $PSScriptRoot 'prepare-engine.ps1')
+    $EngineDirectory = (Get-Content -LiteralPath (Join-Path $PSScriptRoot 'target/engine-ready.txt') -Raw).Trim()
+}
+$EngineDirectory = (Resolve-Path -LiteralPath $EngineDirectory).Path
+if (-not (Test-Path (Join-Path $EngineDirectory 'node_modules/@deepseek-ai/dsh/lib/bin.js'))) {
+    throw 'Le moteur de production est incomplet.'
+}
+& node (Join-Path $PSScriptRoot 'smoke-engine.mjs') $EngineDirectory
+if ($LASTEXITCODE -ne 0) { throw 'Le test web du moteur isolé a échoué.' }
+$resourceConfig = Join-Path $PSScriptRoot 'target/installer-resources.json'
+@{ bundle = @{ resources = @{ ($EngineDirectory + '/') = 'engine/' }; windows = @{ nsis = @{ compression = $Compression } } } } | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $resourceConfig
 if ($NodeVersion -notmatch '^24\.\d+\.\d+$') { throw 'A Node 24 release version is required.' }
 $runtimePath = Join-Path $PSScriptRoot 'runtime'
 $archiveName = "node-v$NodeVersion-win-x64.zip"
@@ -23,6 +36,6 @@ $env:CARGO_TARGET_DIR = Join-Path $PSScriptRoot 'target/installer'
 $env:PATH = (Join-Path $env:USERPROFILE '.cargo/bin') + ';' + $env:PATH
 Push-Location $PSScriptRoot
 try {
-    & pnpm dlx @tauri-apps/cli@2.12.6 build --target x86_64-pc-windows-msvc --bundles nsis
+    & pnpm dlx @tauri-apps/cli@2.12.6 build --target x86_64-pc-windows-msvc --bundles nsis --config $resourceConfig
     if ($LASTEXITCODE -ne 0) { throw "Tauri build failed: $LASTEXITCODE" }
 } finally { Pop-Location }

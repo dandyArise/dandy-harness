@@ -1,6 +1,15 @@
 # Dandy Harness
 
-Prototype Windows de Harness avec une fenêtre Tauri 2 et WebView2. Le processus Rust démarre le moteur Node du fork local sur le port 18643 et ouvre l’interface web du fork. Les sessions et le profil web du prototype se trouvent dans `data/`, exclu de Git.
+Application Harness avec une fenêtre Tauri 2. Le processus Rust démarre le moteur Node sur le port 18643 et ouvre son interface web. Les installateurs incluent Node et le moteur.
+
+## Installer
+
+Télécharger l'installateur correspondant à son système dans les
+[releases GitHub](https://github.com/dandyArise/dandy-harness/releases).
+Le workflow `Installers` construit Windows x64, macOS Apple Silicon/Intel et
+Linux x64 (DEB et AppImage), vérifie les moteurs embarqués puis publie une
+préversion avec `SHA256SUMS.txt`. [Instructions et limites de signature](RELEASE.md).
+Chaque build utilise une révision précise du moteur indiquée dans le workflow.
 
 ## Lancer
 
@@ -11,10 +20,15 @@ Depuis PowerShell dans ce dossier, avec Node dans le PATH :
 ```
 
 Le lanceur cherche Node dans cet ordre : `DANDY_NODE_EXECUTABLE` si défini,
-`runtime/node.exe` à côté du lanceur, puis le `PATH`. Cela permet de fournir
+`runtime/node.exe` (ou `runtime/node`) dans les ressources Tauri, puis le `PATH`. Cela permet de fournir
 un runtime avec la distribution sans dépendre du terminal qui ouvre l'application.
 
-Le moteur utilise par défaut le fork construit dans `D:\Github\Projets\IA\deepseek-harness`. Définir `DANDY_HARNESS_SOURCE` pour employer un autre checkout qui dispose de ses dépendances et artefacts web. Le profil LM Studio importé lit `LM_API_TOKEN` dans l’environnement du processus. Une fois ouvert, utiliser la barre latérale pour sélectionner une conversation.
+Le lanceur utilise le dossier `engine/` des ressources Tauri (à côté de l'exécutable Windows, dans `Contents/Resources` sur Mac). Pour un lancement de développement, définir `DANDY_HARNESS_SOURCE` vers le checkout compilé avant la commande ci-dessus. Un chemin explicite invalide produit une erreur, sans repli silencieux. Le profil LM Studio utilise la référence `LM_API_TOKEN` du gestionnaire de credentials ou de l'environnement.
+
+`DSH_HOME` permet de choisir le dossier de données. Les installations existantes conservent leur ancien `data/` ; sur une nouvelle machine, les données vont dans `%LOCALAPPDATA%/Dandy Harness/data`. Les clés, sessions et paramètres personnels ne sont jamais inclus dans le paquet moteur.
+
+Sur macOS : `~/Library/Application Support/Dandy Harness/data`. Sur Linux :
+`$XDG_DATA_HOME/Dandy Harness/data`, ou `~/.local/share/Dandy Harness/data`.
 
 ## Construire
 
@@ -29,10 +43,12 @@ Avec pnpm, Rust MSVC et les outils C++ Visual Studio disponibles :
 Le script vérifie le SHA-256 officiel de Node 24, embarque son exécutable et sa
 licence, puis produit `target/installer/x86_64-pc-windows-msvc/release/bundle/nsis/Dandy Harness_0.1.0_x64-setup.exe`.
 L'installation est par utilisateur, dans `%LOCALAPPDATA%/Dandy Harness`.
-Le runtime Node est inclus ; le moteur reste fourni par le checkout décrit
-ci-dessus. Ce paquet n'est donc pas encore une distribution autonome du moteur.
+Le script prépare les paquets locaux vérifiés et leurs dépendances de production
+dans un dossier isolé, puis embarque ce moteur avec Node. Le checkout est requis
+pour construire le paquet, pas pour l'exécuter. `-EngineDirectory` accepte un
+dossier de production déjà préparé pour éviter de refaire cette étape.
 
-Le lanceur Rust utilise `apps/cli/lib/bin.js` quand la CLI est compilée. Après une modification des sources de la CLI, reconstruire cet artefact pour que le prochain lancement utilise la modification. Si le fichier compilé est absent, le lanceur charge `apps/cli/src/bin.ts` via `tsx`.
+En mode développement, le lanceur Rust utilise `apps/cli/lib/bin.js`. Après une modification des sources de la CLI, reconstruire cet artefact pour que le prochain lancement utilise la modification. La distribution embarquée utilise `engine/node_modules/@deepseek-ai/dsh/lib/bin.js`.
 
 Dans un terminal développeur Visual Studio x64 avec Rust MSVC :
 
@@ -40,7 +56,7 @@ Dans un terminal développeur Visual Studio x64 avec Rust MSVC :
 cargo +stable-x86_64-pc-windows-msvc build --locked --target x86_64-pc-windows-msvc
 ```
 
-Le prototype dépend du checkout du moteur et du dossier de projet pour ses données. Les intégrations Electron spécifiques et la distribution autonome restent à porter. L’icône provient du fork Harness, dont la licence accompagne le fichier dans `icons/`.
+Les intégrations Electron spécifiques ne sont pas portées. L’icône provient du fork Harness, dont la licence accompagne le fichier dans `icons/`.
 
 ## Supervision et portage Rust
 
