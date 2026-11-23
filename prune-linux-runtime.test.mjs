@@ -15,15 +15,17 @@ test('Linux staging preserves glibc, static sandbox and matching PTY only', () =
       '@deepseek-ai/node-addon-system-linux-x64/bin/glibc/system.node',
       '@deepseek-ai/node-addon-system-linux-x64/bin/musl/system.node',
       '@deepseek-ai/node-addon-system-linux-x64/bin/landlock-run',
+      '@koromix/koffi-linux-x64/linux_x64/koffi.node',
+      '@koromix/koffi-linux-x64/musl_x64/koffi.node',
     ];
     for (const file of files) {
       const path = join(root, 'node_modules', file);
       mkdirSync(join(path, '..'), { recursive: true });
       writeFileSync(path, 'fixture');
     }
-    assert.equal(pruneLinuxRuntime(root, 'x64').length, 3);
-    for (const i of [0, 3, 5]) assert.ok(existsSync(join(root, 'node_modules', files[i])));
-    for (const i of [1, 2, 4]) assert.equal(existsSync(join(root, 'node_modules', files[i])), false);
+    assert.equal(pruneLinuxRuntime(root, 'x64').length, 4);
+    for (const i of [0, 3, 5, 6]) assert.ok(existsSync(join(root, 'node_modules', files[i])));
+    for (const i of [1, 2, 4, 7]) assert.equal(existsSync(join(root, 'node_modules', files[i])), false);
     assert.deepEqual(pruneLinuxRuntime(root, 'x64'), []);
     writeFileSync(join(root, 'package.json'), JSON.stringify({ name: 'user-project' }));
     assert.throws(() => pruneLinuxRuntime(root), /not an isolated/);

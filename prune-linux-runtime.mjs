@@ -18,8 +18,13 @@ export function pruneLinuxRuntime(directory, arch = process.arch) {
       if (entry.name !== `linux-${arch}` && entry.isDirectory()) removals.push(join(dir, entry.name));
     }
   }
-  const musl = join(root, 'node_modules', `@deepseek-ai/node-addon-system-linux-${arch}`, 'bin/musl');
-  if (existsSync(musl)) removals.push(musl);
+  for (const name of [
+    `@deepseek-ai/node-addon-system-linux-${arch}/bin/musl`,
+    `@koromix/koffi-linux-${arch}/musl_${arch}`,
+  ]) {
+    const musl = join(root, 'node_modules', name);
+    if (existsSync(musl)) removals.push(musl);
+  }
   // Validate all resolved targets before removing anything, including junctions.
   for (const path of removals) {
     const rel = relative(root, realpathSync(path));
